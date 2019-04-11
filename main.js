@@ -2,11 +2,11 @@
 var input= document.querySelector("#input");
 
 //Select unit selection
-varunit= document.querySelector("#unit");
+var unit= document.querySelector("#unit");
 
-//catch user input eventand unit change
-input.addEventListener("input, convert");
-unit.addEventListener("input, convert");
+//catch user input event and unit change
+input.addEventListener("input", convert);
+unit.addEventListener("input", convert);
 
 function convert(){
 
@@ -23,16 +23,38 @@ function convert(){
      } else{
          output.style.display="none";
      }
-       
+
+
 // Check unit type
 switch(unitValue) {
     case "lbs":
-    convertLbs
-    case "grams";
-    case "kilograms";
+    convertLbs(value);
+    break;
 
+    case "grams":
+    convertGrams(value);
+    break;
+
+    case "kilograms":
+    break;
+
+    case "ounces":
+    break;
+
+    case "meters":
+    
+    break;
+
+    case "miles":
+    break;
+
+    case "inches":
+    break;
 
 }
+}
+
+
    var card1= document.querySelector("#card-1");
    var card2= document.querySelector("#card-2");
    var card3= document.querySelector("#card-3");
@@ -40,23 +62,34 @@ switch(unitValue) {
 
    function convertLbs(value){
        card1.querySelector('h4').textContent="Grams:"
-       card1.querySelector('h4').textContent="Grams:"
-       card1.querySelector('h4').textContent="Grams:"
+       card2.querySelector('h4').textContent="Kilograms:"
+       card3.querySelector('h4').textContent="Ounces:"
+
+       card1.querySelector('div').textContent=value*453.592
+       card2.querySelector('div').textContent=value*453.592/1000
+       card3.querySelector('div').textContent=value*16
        
    }
 
+     
+function convertGrams(value){
+    card1.querySelector('h4').textContent="Kilograms:"
+    card2.querySelector('h4').textContent="Ounces:"
+    card3.querySelector('h4').textContent="Lbs:"
 
-   
-    //Gram
-    document.querySelector("#gram").textContent=value*453.592;
-    
-    
+    card1.querySelector('div').textContent=value*1000;
+    card2.querySelector('div').textContent=value*0.035274;
+    card3.querySelector('div').textContent=value*0.00220462;
 
-    //Kilogram
-    document.querySelector("#kilogram").textContent=value*453.592/1000;
+}
 
+function convertGrams(value){
+    card1.querySelector('h4').textContent="Kilograms:"
+    card2.querySelector('h4').textContent="Ounces:"
+    card3.querySelector('h4').textContent="Lbs:"
 
+    card1.querySelector('div').textContent=value*1000;
+    card2.querySelector('div').textContent=value*0.035274;
+    card3.querySelector('div').textContent=value*0.00220462;
 
-    //Ounce
-    document.querySelector("#ounce").textContent=value*16;
 }

@@ -12,41 +12,44 @@
    <div class="container">
        <h1 class="text-center md-4">Unit Converter</h1>
        <div class="input-group mb-3">
-            <input type="number" class="form-control" id="input" name="input" placeholder="Enter value here..." aria-label="Recipient's username" aria-describedby="basic-addon2">
-            <div class="input-group-append">
-              <span class="input-group-text">lbs</span>
-            </div>
-          </div>
+            <input type="number" class="form-control" id="input" name="input" placeholder="Enter value here...">
        <div class="input-group-append">
-        <select class="btn-btn-light" name="unit" >
-            <optgroup>
+        <select class="btn-btn-light" name="unit" id="unit">
+            <optgroup label="Weight">
                 <option>lbs</option>
                 <option>grams</option>
                 <option>kilograms</option>
                 <option>ounces</option>
             </optgroup>
+            <optgroup label="Length">
+                    <option>meters</option>
+                    <option>miles</option>
+                    <option>feet</option>
+                    <option>inches</option> 
+            </optgroup>
         </select>
+       </div>
        </div>
        <section id="output">
            <!---Gram-->
            <div class="card bg-primary mb-3">
             <div class="card-header" id="card-1">
-                <h4>Grams:</h4>
-                <div id="gram"></div>
+                <h4></h4>
+                <div></div>
             </div>
            </div>
            <!---Kilogram-->
            <div class="card bg-success mb-3">
                 <div class="card-header" id="card-2">
-                    <h4>Kilograms:</h4>
-                    <div id="kilogram"></div>
+                    <h4></h4>
+                    <div></div>
                 </div>
                </div>
                <!---Ounce-->
                <div class="card bg-danger mb-3">
                     <div class="card-header" id="card-3">
-                        <h4>Ounces:</h4>
-                        <div id="ounce"></div>
+                        <h4></h4>
+                        <div></div>
                     </div>
                    </div>
        </section>
